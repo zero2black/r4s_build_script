@@ -58,6 +58,11 @@ pushd feeds/luci
     curl -s $mirror/openwrt/patch/luci/applications/luci-app-natmap/0001-luci-app-natmap-add-default-STUN-server-lists.patch | patch -p1
 popd
 
+
+# OpenClash
+git clone --depth=1 -b dev https://github.com/vernesong/OpenClash package/new/OpenClash
+
+
 # samba4 - bump version
 rm -rf feeds/packages/net/samba4
 git clone https://$github/sbwml/feeds_packages_net_samba4 feeds/packages/net/samba4
